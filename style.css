@@ -1,0 +1,101 @@
+/* style.css
+   Shared stylesheet for the College Club website.
+   Demonstrates floats (hero/about) and flexbox (nav, events).
+*/
+
+/* ---------- BASIC RESET ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #0f172a; background:#fff; }
+.container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+/* ---------- HEADER / NAV ---------- */
+.site-header { background: #0f172a; color: #fff; }
+.header-inner { display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
+.logo { font-weight:700; text-decoration:none; color: #fff; font-size:1.15rem; }
+.main-nav ul { list-style:none; display:flex; gap:12px; }
+.main-nav a { color:#cbd5e1; text-decoration:none; padding:8px 10px; border-radius:6px; display:block; }
+.main-nav a:hover { color:#fff; background:rgba(255,255,255,0.04); }
+.main-nav a.active { color:#fff; background: rgba(255,255,255,0.06); }
+
+/* ---------- HERO (float layout) ---------- */
+.hero { padding:30px 0; }
+.hero-text { width:58%; float:left; padding-right:20px; }
+.hero-text h1 { font-size:2rem; margin-bottom:12px; color:#03233c; }
+.hero-text p { line-height:1.5; margin-bottom:12px; color:#374151; }
+.hero-image { width:40%; float:right; text-align:right; }
+.hero-image img { max-width:100%; height:auto; border-radius:10px; box-shadow:0 6px 18px rgba(2,6,23,0.08); }
+
+/* clearfix helper */
+.clearfix::after { content:""; display:block; clear:both; }
+
+/* ---------- FEATURES (flex) ---------- */
+.features { padding:28px 0; }
+.feature-list { display:flex; gap:18px; margin-top:14px; }
+.feature { flex:1; background:#f8fafc; padding:16px; border-radius:10px; box-shadow: 0 2px 6px rgba(2,6,23,0.04); }
+
+/* ---------- EVENTS (flexbox cards) ---------- */
+.events { padding:28px 0 60px; }
+.events .lead { color:#475569; margin-bottom:16px; }
+.event-cards { display:flex; gap:18px; flex-wrap:wrap; align-items:stretch; }
+.event-card {
+  flex:1 1 300px;
+  border: 3px solid var(--card-border, #e2e8f0);
+  background: var(--card-bg, #fff);
+  padding:12px;
+  border-radius:10px;
+  min-width:240px;
+  box-shadow: 0 4px 14px rgba(2,6,23,0.04);
+}
+.event-card img { width:100%; height:160px; object-fit:cover; border-radius:6px; }
+.event-card h3 { margin-top:10px; margin-bottom:6px; color:#0f172a; }
+.event-card p { color:#475569; line-height:1.4; }
+
+/* ---------- ABOUT (float image + text) ---------- */
+.about { padding:28px 0; }
+.about-image { width:40%; float:left; margin-right:20px; }
+.about-image img { width:100%; border-radius:8px; box-shadow:0 6px 18px rgba(2,6,23,0.06); }
+.about-text { width:58%; float:right; }
+.about-text h1 { margin-bottom:10px; color:#03233c; }
+.about-text p { margin-bottom:10px; color:#374151; }
+
+/* ---------- JOIN FORM ---------- */
+.join { padding:28px 0 60px; }
+.join-form { max-width:640px; display:block; margin-top:12px; }
+.join-form label { display:block; margin:12px 0 6px; color:#334155; font-weight:600; }
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form select {
+  width:100%;
+  padding:10px 12px;
+  border:1px solid #e6eef7;
+  border-radius:8px;
+  outline:none;
+  background:#fff;
+}
+.join-form input:focus, .join-form select:focus { box-shadow: 0 4px 12px rgba(2,6,23,0.06); border-color:#c7e0ff; }
+.btn {
+  display:inline-block;
+  padding:10px 14px;
+  text-decoration:none;
+  border-radius:8px;
+  background:#0ea5a3;
+  color:white;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
+  margin-top:8px;
+}
+.btn:hover { transform: translateY(-1px); }
+
+/* ---------- FOOTER ---------- */
+.site-footer { background:#f8fafc; color:#475569; padding:16px 0; margin-top:40px; text-align:center; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 800px) {
+  .header-inner { flex-direction:column; gap:10px; align-items:flex-start; }
+  .hero-text, .hero-image, .about-image, .about-text { float:none; width:100%; text-align:left; }
+  .hero-image img, .about-image img { margin-top:12px; }
+  .feature-list { flex-direction:column; }
+  .event-cards { flex-direction:column; }
+  .main-nav ul { flex-wrap:wrap; gap:8px; }
+}
