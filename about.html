@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Campus Creators Club</title>
+  <link rel="stylesheet" href="style.css" />
+  <!--
+    about.html
+    About Club page. Uses float for two-column layout (image + text).
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="logo">Campus Creators</a>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container about">
+      <!-- Image floated left, text on the right -->
+      <div class="about-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCo_2Ct3UmsmlwqG1vzCwzQZnDCB9qvg4Pxg&s" alt="Club members" />
+      </div>
+
+      <div class="about-text">
+        <h1>About Campus Creators</h1>
+        <p>
+          Campus Creators is a multidisciplinary student club founded to bring
+          together learners who enjoy creating — whether that's software,
+          hardware, or campus events. Our members come from different branches
+          and years, and we value collaboration and hands-on learning.
+        </p>
+        <p>
+          The club organizes workshops, collaborative projects, and speaker
+          sessions. We focus on practical skills, teamwork, and building a
+          portfolio that helps members when applying for internships and jobs.
+        </p>
+        <p>
+          Every semester we run a flagship hackathon and multiple mini-events
+          where members can showcase their work and get feedback from peers and
+          mentors.
+        </p>
+        <p>
+          Interested? Click below to view upcoming events or join the club.
+        </p>
+        <p><a class="btn" href="events.html">See Events</a></p>
+      </div>
+
+      <div class="clearfix"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year-about"></span> Campus Creators Club</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year-about').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
