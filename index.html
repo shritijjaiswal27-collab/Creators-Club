@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campus Creators Club — Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <!--
+    index.html
+    Home page for the College Club website.
+    Demonstrates float-based layout for the hero/intro section.
+  -->
+</head>
+<body>
+  <!-- Common navigation (present on all pages) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="logo">Campus Creators</a>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero section uses float layout -->
+    <section class="hero container">
+      <!-- Left column: text (floated) -->
+      <div class="hero-text">
+        <h1>Welcome to Campus Creators</h1>
+        <p>
+          We are a student-run club that builds projects, hosts events, and helps
+          members learn real-world skills. Join workshops, hack nights, and
+          demo days — all organized by students for students.
+        </p>
+        <p>
+          Whether you like coding, design, event management or public speaking,
+          there is a place for you here.
+        </p>
+        <p><a class="btn" href="join.html">Join the Club</a></p>
+      </div>
+
+      <!-- Right column: image (floated) -->
+      <div class="hero-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaDiCZTQaZNqpzqUqTzqTLLGUTRGsYFIyWWg&s" alt="Students collaborating" />
+      </div>
+      <!-- Clear floats -->
+      <div class="clearfix"></div>
+    </section>
+
+    <!-- Features grid uses flex (for variety) -->
+    <section class="container features">
+      <h2>What we offer</h2>
+      <div class="feature-list">
+        <article class="feature">
+          <h3>Workshops</h3>
+          <p>Hands-on sessions on web dev, ML, design and more.</p>
+        </article>
+        <article class="feature">
+          <h3>Projects</h3>
+          <p>Team projects to build your portfolio and practical skills.</p>
+        </article>
+        <article class="feature">
+          <h3>Community</h3>
+          <p>Supportive peers, mentorship and networking opportunities.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Campus Creators Club — All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    // small script to set year dynamically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
