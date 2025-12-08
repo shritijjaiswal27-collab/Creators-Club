@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Events — Campus Creators Club</title>
+  <link rel="stylesheet" href="style.css" />
+  <!--
+    events.html
+    Events page. Event cards are aligned using Flexbox (requirement).
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="logo">Campus Creators</a>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html" class="active">Events</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container events">
+      <h1>Upcoming Events</h1>
+      <p class="lead">Join our activities — workshops, hack nights and showcases.</p>
+
+      <!-- Event cards container (flexbox) -->
+      <div class="event-cards">
+        <!-- card 1 -->
+        <article class="event-card" style="--card-bg:#fef3c7; --card-border:#f59e0b;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvp8nQjnnBhsSJWmmkFujqsN4DkyBvZHb90-9po8r-58lqimpjJZlNakc&s" alt="Workshop" />
+          <h3>Web Dev Workshop</h3>
+          <p>Learn modern HTML, CSS and JavaScript basics in a hands-on session.</p>
+        </article>
+
+        <!-- card 2 -->
+        <article class="event-card" style="--card-bg:#ecfeff; --card-border:#06b6d4;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTejpqkeXi_tuHdeA08Jh2OmjZNKUDe5eSAg&s" alt="Hack Night" />
+          <h3>Hack Night</h3>
+          <p>Build a small project in an evening with mentorship from seniors.</p>
+        </article>
+
+        <!-- card 3 -->
+        <article class="event-card" style="--card-bg:#f3e8ff; --card-border:#7c3aed;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwkj8uc5aUc8WnfEYsHvHKqnS1oW9r0qSVHw&s" alt="Showcase" />
+          <h3>Project Showcase</h3>
+          <p>Present your semester project and receive feedback from peers.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year-events"></span> Campus Creators Club</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year-events').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
