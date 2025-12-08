@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Join — Campus Creators Club</title>
+  <link rel="stylesheet" href="style.css" />
+  <!--
+    join.html
+    Join the club form page. Demonstrates HTML forms with proper labels.
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="logo">Campus Creators</a>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="join.html" class="active">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container join">
+      <h1>Join the Club</h1>
+      <p class="lead">Fill the form below — we will contact you on the email provided.</p>
+
+      <!-- Join form -->
+      <form class="join-form" action="#" method="post" novalidate>
+        <!-- Name -->
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your full name" required />
+
+        <!-- Branch -->
+        <label for="branch">Branch</label>
+        <input id="branch" name="branch" type="text" placeholder="e.g. Computer Science" required />
+
+        <!-- Year (select) -->
+        <label for="year">Year</label>
+        <select id="year" name="year" required>
+          <option value="">Select year</option>
+          <option>1st Year</option>
+          <option>2nd Year</option>
+          <option>3rd Year</option>
+          <option>4th Year</option>
+        </select>
+
+        <!-- Email -->
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@college.edu" required />
+
+        <!-- Submit -->
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year-join"></span> Campus Creators Club</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year-join').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
