@@ -27,7 +27,7 @@ This project demonstrates the proper use of **semantic HTML**, **CSS styling**, 
 
 * Displays the club name/logo
 * Includes navigation to all pages
-* Basic introduction to the website
+* Basic intro to the website
 
 ---
 
